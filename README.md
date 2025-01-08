@@ -36,7 +36,8 @@ Authenticate users and obtain a JWT token for further requests.
     "password": "password123"
   }
 Response:
-**{
+```json
+{
   "token": "<JWT token>"
 }**
 
@@ -46,7 +47,8 @@ Perform addition of two numbers.
 Endpoint: /add
 Method: POST
 Request Body:
-**{
+  ```json
+{
   "num1": 10,
   "num2": 5
 }**
@@ -135,6 +137,7 @@ curl -X POST http://localhost:8080/login -d '{"username": "admin", "password": "
 
 2. Use the token to make requests:
 Addition:
+bash 
 curl -X POST http://localhost:8080/add -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 
 Subtraction:
