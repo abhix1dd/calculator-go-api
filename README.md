@@ -39,7 +39,7 @@ Response:
 ```json
 {
   "token": "<JWT token>"
-}**
+}
 
 2. Addition
 Perform addition of two numbers.
@@ -51,11 +51,12 @@ Request Body:
 {
   "num1": 10,
   "num2": 5
-}**
+}
 Response:
-**{
+```json
+{
   "result": 15
-}**
+}
 
 3. Subtraction
 Perform subtraction of two numbers.
@@ -63,14 +64,16 @@ Perform subtraction of two numbers.
 Endpoint: /subtract
 Method: POST
 Request Body:
-**{
+```json
+{
   "num1": 10,
   "num2": 5
-}**
+}
 Response:
-**{
+```json
+{
   "result": 5
-}**
+}
 
 4. Multiplication
 Perform multiplication of two numbers.
@@ -78,14 +81,16 @@ Perform multiplication of two numbers.
 Endpoint: /product
 Method: POST
 Request Body:
-**{
+```json
+{
   "num1": 10,
   "num2": 5
-}**
+}
 Response:
-**{
+```json
+{
   "result": 50
-}**
+}
 
 5. Division
 Perform division of two numbers.
@@ -93,20 +98,23 @@ Perform division of two numbers.
 Endpoint: /divide
 Method: POST
 Request Body:
-**{
+```json
+{
   "num1": 10,
   "num2": 5
-}**
+}
 Response:
-**{
+```json
+{
   "result": 2
-}**
+}
 
 Rate Limiting
 The API is rate-limited to 2 requests per 5 seconds. If the limit is exceeded, you will receive a response with the following error:
-**{
+```json
+{
   "message": "Rate limit exceeded. Try again later."
-}**
+}
 
 Installation
 To run this project locally, follow the steps below:
