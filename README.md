@@ -37,9 +37,28 @@ Authenticate users and obtain a JWT token for further requests.
   }
 
 Response:
-JSON
+  ```json
 {
   "token": "<JWT token>"
+}
+
+### 2. **Add**
+
+Authenticate users and obtain a JWT token for further requests.
+
+- **Endpoint**: `/login`
+- **Method**: `POST`
+- **Request Body**:
+  ```json
+  {
+    "num1": 5,
+    "num2": 10
+  }
+
+Response:
+  ```json
+{
+"result": 15
 }
 
 Rate Limiting
