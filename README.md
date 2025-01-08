@@ -41,70 +41,7 @@ JSON
 {
   "token": "<JWT token>"
 }
-2. Add
-Perform addition of two numbers.
 
-Endpoint: /add
-Method: POST
-Request Body:
-JSON
-{
-  "num1": 10,
-  "num2": 5
-}
-Response:
-JSON
-{
-  "result": 15
-}
-3. Subtract
-Perform subtraction of two numbers.
-
-Endpoint: /subtract
-Method: POST
-Request Body:
-JSON
-{
-  "num1": 10,
-  "num2": 5
-}
-Response:
-JSON
-{
-  "result": 5
-}
-4. Multiply
-Perform multiplication of two numbers.
-
-Endpoint: /product
-Method: POST
-Request Body:
-JSON
-{
-  "num1": 10,
-  "num2": 5
-}
-Response:
-JSON
-{
-  "result": 50
-}
-5. Divide
-Perform division of two numbers.
-
-Endpoint: /divide
-Method: POST
-Request Body:
-JSON
-{
-  "num1": 10,
-  "num2": 5
-}
-Response:
-JSON
-{
-  "result": 2
-}
 Rate Limiting
 The API is rate-limited to 2 requests per 5 seconds. If the limit is exceeded, you will receive a response with the following error:
 
