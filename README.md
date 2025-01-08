@@ -35,13 +35,12 @@ Authenticate users and obtain a JWT token for further requests.
     "username": "admin",
     "password": "password123"
   }
-
 - **Response**:
-  json
-{
-  "token": "<JWT token>"
-}
-
+  ```json
+  {
+      "token": "<JWT token>"
+  }
+  
 ### 2. **Add**
 
 Perform Addition of two numbers.
@@ -58,10 +57,9 @@ Perform Addition of two numbers.
 
 - **Response**:
   ```json
-{
-  "result": 15
-}
-
+  {
+      "result": 15
+  }
 ### 3. **Subtract**
 
 Perform Subtraction of two numbers.
@@ -78,11 +76,9 @@ Perform Subtraction of two numbers.
 
 - **Response**:
   ```json
-{
-  "result": -5
-}
-
-
+  {
+      "result": -5
+  }
 ### 4. **Multiplication**
 
 Perform Product of two numbers.
@@ -99,11 +95,9 @@ Perform Product of two numbers.
 
 - **Response**:
   ```json
-{
-  "result": 50
-}
-
-
+  {
+      "result": 50
+  }
 ### 5. **Divide**
 
 Perform Divsion of two numbers.
@@ -120,18 +114,16 @@ Perform Divsion of two numbers.
  
 - **Response**:
   ```json
-{
-  "result": 0.5
-}
-
+  {
+      "result": 0.5
+  }
 ## Rate Limiting
 The API is rate-limited to 2 requests per 5 seconds. If the limit is exceeded, you will receive a response with the following error:
 - **Response**:
   ```json
-{
- "message": "Rate limit exceeded. Try again later."
-}
-
+  {
+     "message": "Rate limit exceeded. Try again later."
+  }
 ## Installation
 To run this project locally, follow the steps below:
 
@@ -156,23 +148,19 @@ You can test the API using Postman or cURL by sending POST requests to the endpo
 
 Example Usage with cURL
 - **Get the JWT token:**
-
-curl -X POST http://localhost:8080/login -d '{"username": "admin", "password": "password123"}' -H "Content-Type: application/json"
-
+    ```bash
+    curl -X POST http://localhost:8080/login -d '{"username": "admin", "password": "password123"}' -H "Content-Type: application/json"
 Use the token to make requests:
 
 - **Addition:**
-
-curl -X POST http://localhost:8080/add -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
-
+    ```bash
+    curl -X POST http://localhost:8080/add -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 - **Subtraction:**
-
-curl -X POST http://localhost:8080/subtract -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
-
+    ```bash
+    curl -X POST http://localhost:8080/subtract -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 - **Multiplication:**
-
-curl -X POST http://localhost:8080/product -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
-
+    ```bash
+    curl -X POST http://localhost:8080/product -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 - **Division:**
- 
-curl -X POST http://localhost:8080/divide -d '{"num1": 10, "num2": 5}' -H "Authorization: Bea
+    ```bash
+    curl -X POST http://localhost:8080/divide -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
