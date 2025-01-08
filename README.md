@@ -36,81 +36,143 @@ Authenticate users and obtain a JWT token for further requests.
     "password": "password123"
   }
 
-Response:
+- **Response**:
   ```json
 {
   "token": "<JWT token>"
 }
 
-### 1. **Login**
+### 2. **Add**
 
-Authenticate users and obtain a JWT token for further requests.
+Perform Addition of two numbers.
 
-- **Endpoint**: `/login`
+- **Endpoint**: `/add`
 - **Method**: `POST`
 - **Request Body**:
   ```json
   {
-    "username": "admin",
-    "password": "password123"
+    "num1": 5,
+    "num2": 10
   }
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
 
-Response:
+- **Response**:
   ```json
 {
-  "token": "<JWT token>"
+  "result": 15
 }
 
-Rate Limiting
-The API is rate-limited to 2 requests per 5 seconds. If the limit is exceeded, you will receive a response with the following error:
+### 3. **Subtract**
 
-JSON
+Perform Subtraction of two numbers.
+
+- **Endpoint**: `/subtract`
+- **Method**: `POST`
+- **Request Body**:
+  ```json
+  {
+    "num1": 5,
+    "num2": 10
+  }
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+
+- **Response**:
+  ```json
 {
-  "message": "Rate limit exceeded. Try again later."
+  "result": -5
 }
-Installation
+
+
+### 4. **Multiplication**
+
+Perform Product of two numbers.
+
+- **Endpoint**: `/product`
+- **Method**: `POST`
+- **Request Body**:
+  ```json
+  {
+    "num1": 5,
+    "num2": 10
+  }
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+
+- **Response**:
+  ```json
+{
+  "result": 50
+}
+
+
+### 5. **Divide**
+
+Perform Divsion of two numbers.
+
+- **Endpoint**: `/divide`
+- **Method**: `POST`
+- **Request Body**:
+  ```json
+  {
+    "num1": 5,
+    "num2": 10
+  }
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+ 
+- **Response**:
+  ```json
+{
+  "result": 0.5
+}
+
+## Rate Limiting
+The API is rate-limited to 2 requests per 5 seconds. If the limit is exceeded, you will receive a response with the following error:
+- **Response**:
+  ```json
+{
+ "message": "Rate limit exceeded. Try again later."
+}
+
+## Installation
 To run this project locally, follow the steps below:
 
-**Clone the repository
-**
+- **Clone the repository**
+
 
 git clone https://github.com/your-username/Calculator-API.git
 cd Calculator-API
 
-**Install Dependencies
-**
+- **Install Dependencies**
+
 Ensure you have Go installed. You can check this with the command go version. If it's not installed, download Go here.
 
-**Run the server
-**
+- **Run the server**
+
 go run main.go
 
 The server will start on http://localhost:8080.
 
-**Test the API
-**
+## Test the API
 You can test the API using Postman or cURL by sending POST requests to the endpoints mentioned above. Make sure to include the Authorization header with the Bearer token for authenticated routes.
 
 Example Usage with cURL
-Get the JWT token:
-
+- **Get the JWT token:**
 
 curl -X POST http://localhost:8080/login -d '{"username": "admin", "password": "password123"}' -H "Content-Type: application/json"
 
 Use the token to make requests:
 
-Addition:
+- **Addition:**
 
 curl -X POST http://localhost:8080/add -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 
-Subtraction:
+- **Subtraction:**
 
 curl -X POST http://localhost:8080/subtract -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 
-Multiplication:
+- **Multiplication:**
 
 curl -X POST http://localhost:8080/product -d '{"num1": 10, "num2": 5}' -H "Authorization: Bearer <JWT token>" -H "Content-Type: application/json"
 
-Division:
-
+- **Division:**
+ 
 curl -X POST http://localhost:8080/divide -d '{"num1": 10, "num2": 5}' -H "Authorization: Bea
