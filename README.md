@@ -42,7 +42,7 @@ Response:
   "token": "<JWT token>"
 }
 
-### 2. **Add**
+### 1. **Login**
 
 Authenticate users and obtain a JWT token for further requests.
 
@@ -51,14 +51,14 @@ Authenticate users and obtain a JWT token for further requests.
 - **Request Body**:
   ```json
   {
-    "num1": 5,
-    "num2": 10
+    "username": "admin",
+    "password": "password123"
   }
 
 Response:
   ```json
 {
-"result": 15
+  "token": "<JWT token>"
 }
 
 Rate Limiting
