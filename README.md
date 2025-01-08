@@ -53,7 +53,7 @@ Perform Addition of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer + " " + jwt_token}
 
 - **Response**:
   ```json
@@ -72,7 +72,7 @@ Perform Subtraction of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer + " " + jwt_token}
 
 - **Response**:
   ```json
@@ -91,7 +91,7 @@ Perform Product of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer + " " + jwt_token}
 
 - **Response**:
   ```json
@@ -110,8 +110,7 @@ Perform Divsion of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
- 
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer + " " + jwt_token} 
 - **Response**:
   ```json
   {
