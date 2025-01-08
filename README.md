@@ -36,26 +36,23 @@ Authenticate users and obtain a JWT token for further requests.
     "password": "password123"
   }
 Response:
-json
-
+```json
 {
   "token": "<JWT token>"
 }
-2. Addition
+### 2. **Add**
 Perform addition of two numbers.
 
-Endpoint: /add
-Method: POST
-Request Body:
-json
-
+- **Endpoint**: `/login`
+- **Method**: `POST`
+- **Request Body**:
+  ```json
 {
   "num1": 10,
   "num2": 5
 }
 Response:
-json
-
+  ```json
 {
   "result": 15
 }
