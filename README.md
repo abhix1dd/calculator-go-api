@@ -41,12 +41,12 @@ Response:
   "token": "<JWT token>"
 }
 
-2. Addition
+### 2. **Addition**
 Perform addition of two numbers.
 
-Endpoint: /add
-Method: POST
-Request Body:
+- **Endpoint**: `/add`
+- **Method**: `POST`
+- **Request Body**:
   ```json
 {
   "num1": 10,
@@ -58,12 +58,12 @@ Response:
   "result": 15
 }
 
-3. Subtraction
+### 3. **Subtract**
 Perform subtraction of two numbers.
 
-Endpoint: /subtract
-Method: POST
-Request Body:
+- **Endpoint**: `/subtract`
+- **Method**: `POST`
+- **Request Body**:
 ```json
 {
   "num1": 10,
@@ -75,12 +75,12 @@ Response:
   "result": 5
 }
 
-4. Multiplication
+### 4. **Multplication**
 Perform multiplication of two numbers.
 
-Endpoint: /product
-Method: POST
-Request Body:
+- **Endpoint**: `/product`
+- **Method**: `POST`
+- **Request Body**:
 ```json
 {
   "num1": 10,
@@ -92,12 +92,12 @@ Response:
   "result": 50
 }
 
-5. Division
+### 5. **Division**
 Perform division of two numbers.
 
-Endpoint: /divide
-Method: POST
-Request Body:
+- **Endpoint**: `/divide`
+- **Method**: `POST`
+- **Request Body**:
 ```json
 {
   "num1": 10,
