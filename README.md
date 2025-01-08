@@ -37,7 +37,7 @@ Authenticate users and obtain a JWT token for further requests.
   }
 
 - **Response**:
-  ```json
+  json
 {
   "token": "<JWT token>"
 }
