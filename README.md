@@ -53,7 +53,7 @@ Perform Addition of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
 
 - **Response**:
   ```json
@@ -72,7 +72,7 @@ Perform Subtraction of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
 
 - **Response**:
   ```json
@@ -91,7 +91,7 @@ Perform Product of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
 
 - **Response**:
   ```json
@@ -110,7 +110,7 @@ Perform Divsion of two numbers.
     "num1": 5,
     "num2": 10
   }
- - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <your-jwt-token>}
+ - **Authorization**: Include the Bearer token in the Authorization header.{ Bearer <JWT token>}
  
 - **Response**:
   ```json
@@ -128,20 +128,18 @@ The API is rate-limited to 2 requests per 5 seconds. If the limit is exceeded, y
 To run this project locally, follow the steps below:
 
 - **Clone the repository**
-
-
-git clone https://github.com/your-username/Calculator-API.git
-cd Calculator-API
-
+    ```bash
+    git clone https://github.com/your-username/Calculator-API.git
+    cd Calculator-API
 - **Install Dependencies**
 
-Ensure you have Go installed. You can check this with the command go version. If it's not installed, download Go here.
+    Ensure you have Go installed. You can check this with the command go version. If it's not installed, download Go here.
 
 - **Run the server**
+    ```bash
+    go run main.go
 
-go run main.go
-
-The server will start on http://localhost:8080.
+- The server will start on http://localhost:8080.
 
 ## Test the API
 You can test the API using Postman or cURL by sending POST requests to the endpoints mentioned above. Make sure to include the Authorization header with the Bearer token for authenticated routes.
